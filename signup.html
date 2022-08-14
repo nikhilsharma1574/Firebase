@@ -8,7 +8,7 @@
     <title>server</title>
 </head>
 <body class="max-h-full max-w-full font-sans bg-stone-900 text-amber-50">
-    <nav class="nav flex bg-violet-700">
+    <nav class="nav flex bg-amber-900">
         <div class="left flex border-black ">
             <a class="flex-row mx-3 hover:bg-violet-800 p-3" href="www.google.com">Home</a>
             <a class="flex-row mx-3 hover:bg-violet-800 p-3" href="www.google.com">Contact</a>
@@ -16,23 +16,28 @@
             <a class="flex-row mx-3 hover:bg-violet-800 p-3" href="www.google.com">Blog</a>
         </div>
     </nav>
-    <div class="flex place-content-center my-60">
-        <form class="bg-indigo-700 border-black w-96 max-h-fit border-2 rounded-lg drop-shadow-md" method="post" action="/">
-            <h1 class="text-center font-bold p-2">Login</h1>
-            <hr>
-            <div class="m-8 p-2 space-y-2 max-h-fit">
-                <h1>Username</h1>
-                <input name="name" class="rounded-md w-full p-2 text-slate-900" type="text" placeholder="Username">
-                <h1>Password</h1>
-                <input name="email" class="rounded-md w-full p-2 text-slate-900" type="email" placeholder="Password"><br>
-                <input type="checkbox"> Remember me
-                <br>
-                <br>
-                <div class="text-center border-2 max-h-fit mx-20 p-1 rounded-md content-center border-black bg-indigo-500 hover:bg-indigo-800">
-                    <button value="Submit" id="btn">Sign Up</button>
+    <div class="flex grid grid-cols-2 divide-x place-content-center">
+        <div class="left bg-orange-200">
+            <a href="https://www.freepnglogos.com/pics/coffee-logo-png" title="Image from freepnglogos.com"><img src="https://www.freepnglogos.com/uploads/coffee-logo-png/hot-coffee-logos-28.png" class="h-60" alt="hot coffee logos" /></a>
+        </div>
+
+        <div class="right bg-slate-900 h-screen justify-items-center">
+            <form class="bg-indigo-700 border-black w-96 max-h-fit border-2 rounded-lg drop-shadow-md " method="post" action="/">
+                <h1 class="text-center font-bold p-2">Login</h1>
+                <hr>
+                <div class="m-8 p-2 space-y-2 max-h-fit">
+                    <h1>Username</h1>
+                    <input name="name" class="rounded-md w-full p-2 text-slate-900" type="text" placeholder="Username">
+                    <h1>Password</h1>
+                    <input name="email" class="rounded-md w-full p-2 text-slate-900" type="email" placeholder="Password"><br>
+                    <input type="checkbox"> Remember me
+                    <br><br>
+                    <div class="text-center border-2 max-h-fit mx-20 p-1 rounded-md content-center border-black bg-indigo-500 hover:bg-indigo-800">
+                        <button value="Submit" id="btn">Sign Up</button>
+                    </div>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
     <script src="app.js"></script>
 </body>

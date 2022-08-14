@@ -36,7 +36,7 @@ const { response } = require("express");
           });
           console.log(response);
         };
-       addmember();
+       //addmember();
     //    njnk
        }
        else{
