@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Nikhil Firebase</title>
+</head>
+<body class="bg-stone-600">
+    Login
+    <form onsubmit="login()" id="loginform" class="m-8 bg-sky-500 min-h-fit max-w-max rounded-lg">
+        <div class="grid place-content-center">
+            <div class="inputs">
+                <input id="email" class="m-8 rounded-md" placeholder="Name" type="email">
+                <input id="pw" class="m-8 rounded-md" placeholder="password" type="password">
+           </div>  
+           <div class="btn  place-self-center rounded-md">
+            <button type="submit" class="bg-green-700 rounded-md px-5 py-2 m-3 login">Login</button>
+            <button class="bg-red-700 rounded-md px-5 py-2 m-3 logout">Logout</button>
+           </div>    
+        </div>
+    </form>
+    <script src="https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.9.3/firebase-analytics.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/9.9.3/firebase-auth.js"></script>
+    <script src="./firebase.js"></script>
+    <script src="indexfirebase.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-analytics.js";
+
+        const firebaseConfig = {
+          apiKey: "AIzaSyDaWyw3pQMZclCUEwWU_DYjt7gDmXP0Xp4",
+          authDomain: "nikhilsharma-e1248.firebaseapp.com",
+          databaseURL: "https://nikhilsharma-e1248-default-rtdb.asia-southeast1.firebasedatabase.app",
+          projectId: "nikhilsharma-e1248",
+          storageBucket: "nikhilsharma-e1248.appspot.com",
+          messagingSenderId: "533635628693",
+          appId: "1:533635628693:web:ab062802a0119a4722e59c",
+          measurementId: "G-WPPYCYCY39"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        function login(e)
+        {
+
+            e.preventDefault();
+            console.log("hiii")
+            const email = document.getElementById("email").value
+            const password = document.getElementById("pw").value
+            firebase.auth().signInWithEmailEndPassword(email, password)
+            alert(password);
+
+            firebaseConfig.auth().onAuthStateChanged((user)=>{
+             if(user)
+             {
+               location.replace("databasewelcome.html")
+               alert("done");
+             }
+             else{
+                alert("Not done");
+             }
+             })
+        }  
+      </script> -->

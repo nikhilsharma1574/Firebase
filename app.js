@@ -5,11 +5,53 @@
  const request = require("request");
 const { url } = require("inspector");
 const { response } = require("express");
- const app=express();
+ const appp=express();
+ var fv=('fireebase')
+// Firebase
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+var apiIni =fb.initializeApp({
+  apiKey: "AIzaSyDaWyw3pQMZclCUEwWU_DYjt7gDmXP0Xp4",
+  authDomain: "nikhilsharma-e1248.firebaseapp.com",
+  projectId: "nikhilsharma-e1248",
+  storageBucket: "nikhilsharma-e1248.appspot.com",
+  messagingSenderId: "533635628693",
+  appId: "1:533635628693:web:ab062802a0119a4722e59c",
+  measurementId: "G-WPPYCYCY39"
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ appp.use('view engine','ejs');
 //  const port =3000;
- app.use(express.static("public"));
- app.use(bodyParser.urlencoded({extended:true}));
- app.get("/",function(req,res){
+ appp.use(express.static("public"));
+ appp.use(bodyParser.urlencoded({extended:true}));
+ appp.get("/",function(req,res){
      res.sendFile(__dirname+"/signup.html");
  })
  mailchimp.setConfig({
@@ -17,7 +59,7 @@ const { response } = require("express");
     server: "us10",
   });
  
- app.post("/",function(req,res){
+ appp.post("/",function(req,res){
      var name = req.body.name;
      var email = req.body.email;
       console.log(name);
@@ -28,14 +70,14 @@ const { response } = require("express");
         res.sendFile(__dirname+"/success.html");
         console.log(res.statusCode);
         // jndm
-        const addmember = async () => {
-            const response = await mailchimp.lists.addListMember("e5770461d8", {
-            email_address: "isjnnnnjnewe@gmail.com",
-            status: "subscribed",
+        // const addmember = async () => {
+        //     const response = await mailchimp.lists.addListMember("e5770461d8", {
+        //     email_address: "isjnnnnjnewe@gmail.com",
+        //     status: "subscribed",
      
-          });
-          console.log(response);
-        };
+        //   });
+        //   console.log(response);
+        // };
        //addmember();
     //    njnk
        }
@@ -45,15 +87,14 @@ const { response } = require("express");
        }
  })
    
+ 
 
 
 
 
 
 
-
-
-  app.listen(process.env.PORT || 3000,function()
+  appp.listen(process.env.PORT || 3000,function()
   {
       console.log("Server running on port 3000");
   });
